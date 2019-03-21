@@ -111,8 +111,8 @@ class Point(object):
             return p3
 
     def halfway_to(self, p2):
-        a = (p2.x - self.x)/2
-        b = (p2.y - self.y)/2
+        a = (p2.x - self.x)/2 + self.x
+        b = (p2.y - self.y)/2 + self.y
         return Point(a, b)
 
 
@@ -1102,7 +1102,7 @@ def run_test_halfway_to():
 
     """
     # -------------------------------------------------------------------------
-    # TODO: 13.  Follow the same instructions as in TO-DO 3 above,
+    # DONE: 13.  Follow the same instructions as in TO-DO 3 above,
     #    but for the  halfway_to  method specified above.
     # -------------------------------------------------------------------------
     print()
